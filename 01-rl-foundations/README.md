@@ -41,9 +41,9 @@ Obstacle cells are excluded from the valid state space.
 
 The environment is represented as a Markov Decision Process:
 
-\[
+$$
 \mathcal{M}=(\mathcal{S},\mathcal{A},P,R,\gamma)
-\]
+$$
 
 where:
 
