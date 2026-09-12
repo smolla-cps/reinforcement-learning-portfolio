@@ -47,11 +47,12 @@ $$
 
 where:
 
-- \(\mathcal{S}\) is the state space,
-- \(\mathcal{A}\) is the action space,
-- \(P(s'|s,a)\) is the transition model,
-- \(R(s,a,s')\) is the reward model,
-- \(\gamma\) is the discount factor.
+* $\mathcal{S}$ is the state space,
+* $\mathcal{A}$ is the action space,
+* $P(s'|s,a)$ is the transition model,
+* $R(s,a,s')$ is the reward model,
+* $\gamma$ is the discount factor.
+
 
 ---
 
