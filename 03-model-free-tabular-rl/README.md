@@ -88,8 +88,3 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Recommended order:
-
-1. `01_blackjack_monte_carlo_vs_td.ipynb`
-2. `02_cliffwalking_sarsa_vs_q_learning.ipynb`
-3. `03_model_free_tabular_comparison.ipynb`
