@@ -75,48 +75,21 @@ The notebook includes the transition model, Policy Evaluation, Policy Iteration,
 ### Policy Evaluation
 
 $$
-V_{k+1}^{\pi}(s)
-=
-\sum_a
-\pi(a|s)
-\sum_{s'}
-P(s'|s,a)
-\left[
-R(s,a,s')
-+
-\gamma V_k^{\pi}(s')
-\right].
+V_{k+1}^{\pi}(s)=\sum_a \pi(a|s)\sum_{s'}P(s'|s,a)\left[R(s,a,s')+\gamma V_k^{\pi}(s')\right]
 $$
 
 ### Policy Improvement
 
 $$
-\pi_{\text{new}}(s)
-=
-\arg\max_a
-\sum_{s'}
-P(s'|s,a)
-\left[
-R(s,a,s')
-+
-\gamma V^{\pi}(s')
-\right].
+\pi_{\text{new}}(s)=\arg\max_a\sum_{s'}P(s'|s,a)\left[R(s,a,s')+\gamma V^{\pi}(s')\right]
 $$
 
 ### Value Iteration
 
 $$
-V_{k+1}(s)
-=
-\max_a
-\sum_{s'}
-P(s'|s,a)
-\left[
-R(s,a,s')
-+
-\gamma V_k(s')
-\right].
+V_{k+1}(s)=\max_a\sum_{s'}P(s'|s,a)\left[R(s,a,s')+\gamma V_k(s')\right]
 $$
+
 
 ## 3. 7×7 Deterministic GridWorld: Value Iteration vs. Policy Iteration
 
