@@ -47,17 +47,7 @@ The notebook demonstrates:
 - Policy Iteration,
 - and comparison of final values and policies.
 
-$$
-Q(s,a)
-=
-\sum_{s'}
-P(s'|s,a)
-\left[
-R(s,a,s')
-+
-\gamma V(s')
-\right].
-$$
+$Q(s,a)=\sum_{s'}P(s'|s,a)\left[R(s,a,s')+\gamma V(s')\right]$
 
 ## 2. Slippery FrozenLake: Dynamic Programming
 
@@ -124,15 +114,7 @@ Backpropagation
 Selection uses:
 
 $$
-\operatorname{UCT}(s,a)
-=
-\bar Q(s,a)
-+
-c
-\sqrt{
-\frac{\ln N(s)}
-{N(s,a)}
-}.
+\operatorname{UCT}(s,a)=\bar{Q}(s,a)+c\sqrt{\frac{\ln N(s)}{N(s,a)}}
 $$
 
 MCTS stores visit counts $N(s,a)$, accumulated returns $W(s,a)$, and mean returns $\bar Q(s,a)$.
