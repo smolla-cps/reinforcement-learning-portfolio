@@ -116,9 +116,7 @@ Selection uses:
 $$
 \operatorname{UCT}(s,a)=\bar{Q}(s,a)+c\sqrt{\frac{\ln N(s)}{N(s,a)}}
 $$
-```math
-\operatorname{UCT}(s,a)=\bar{Q}(s,a)+c\sqrt{\frac{\ln N(s)}{N(s,a)}}
-```
+
 
 MCTS stores visit counts $N(s,a)$, accumulated returns $W(s,a)$, and mean returns $\bar Q(s,a)$.
 
