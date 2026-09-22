@@ -133,67 +133,23 @@ The notebooks are arranged in the following order:
 
 For a stochastic policy,
 
-$$
-V_{k+1}^{\pi}(s)
-=
-\sum_a \pi(a|s)
-\sum_{s',r}
-p(s',r|s,a)
-\left[
-r+\gamma V_k^{\pi}(s')
-\right].
-$$
+$$V_{k+1}^{\pi}(s)=\sum_a \pi(a\mid s)\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V_k^{\pi}(s')\right]$$
 
 For a deterministic policy,
 
-$$
-V_{k+1}^{\pi}(s)
-=
-\sum_{s',r}
-p(s',r|s,\pi(s))
-\left[
-r+\gamma V_k^{\pi}(s')
-\right].
-$$
+$$V_{k+1}^{\pi}(s)=\sum_{s',r}p(s',r\mid s,\pi(s))\left[r+\gamma V_k^{\pi}(s')\right]$$
 
 ### Policy Improvement
 
-$$
-\pi_{\text{new}}(s)
-=
-\arg\max_a
-\sum_{s',r}
-p(s',r|s,a)
-\left[
-r+\gamma V^{\pi}(s')
-\right].
-$$
+$$\pi_{\text{new}}(s)=\arg\max_a\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V^{\pi}(s')\right]$$
 
 ### Value Iteration
 
-$$
-V_{k+1}(s)
-=
-\max_a
-\sum_{s',r}
-p(s',r|s,a)
-\left[
-r+\gamma V_k(s')
-\right].
-$$
+$$V_{k+1}(s)=\max_a\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V_k(s')\right]$$
 
 After convergence, the greedy policy is
 
-$$
-\pi^*(s)
-=
-\arg\max_a
-\sum_{s',r}
-p(s',r|s,a)
-\left[
-r+\gamma V^*(s')
-\right].
-$$
+$$\pi^*(s)=\arg\max_a\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V^*(s')\right]$$
 
 ## Policy Iteration vs. Value Iteration
 
