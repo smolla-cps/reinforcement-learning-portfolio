@@ -149,7 +149,9 @@ $$V_{k+1}(s)=\max_a\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V_k(s')\right]$$
 
 After convergence, the greedy policy is
 
-$$\pi^{*}(s)=\arg\max_{a}\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V^{*}(s')\right]$$
+```math
+\pi^{\ast}(s)=\arg\max_{a}\sum_{s',r}p(s',r\mid s,a)\left[r+\gamma V^{\ast}(s')\right]
+```
 
 ## Policy Iteration vs. Value Iteration
 
