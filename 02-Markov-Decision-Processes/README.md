@@ -132,6 +132,24 @@ The first notebook develops the MDP theory, while the second applies those ideas
 
 The notebooks follow this progression:
 
-$\boxed{ \text{Markov Property} \rightarrow \text{MDP} \rightarrow \text{Policy} \rightarrow V^\pi \rightarrow Q^\pi \rightarrow \text{Bellman Equations} \rightarrow V^*,Q^* \rightarrow \text{Optimal Policy} }$
+```math
+\boxed{
+\text{Markov Property}
+\rightarrow
+\text{MDP}
+\rightarrow
+\text{Policy}
+\rightarrow
+V^\pi
+\rightarrow
+Q^\pi
+\rightarrow
+\text{Bellman Equations}
+\rightarrow
+V^*, Q^*
+\rightarrow
+\text{Optimal Policy}
+}
+```
 
 This provides the foundation for later reinforcement-learning methods such as Dynamic Programming, Monte Carlo methods, Temporal-Difference learning, SARSA, and Q-learning.
