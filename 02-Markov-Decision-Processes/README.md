@@ -85,16 +85,11 @@ $V^\pi(s) = \sum_a \pi(a\mid s) \sum_{s',r} p(s',r\mid s,a) \left[ r+\gamma V^\p
 
 ### Bellman optimality equation
 
-$$
-V^*(s)
-=
-\max_a
-\sum_{s',r}
-p(s',r \mid s,a)
-\left[
-r+\gamma V^*(s')
-\right]
-$$
+```math
+V^*(s) =
+\max_a \sum_{s',r} p(s',r \mid s,a)
+\left[ r + \gamma V^*(s') \right]
+```
 
 ## Repository Structure
 
