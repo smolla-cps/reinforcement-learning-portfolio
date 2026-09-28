@@ -124,13 +124,7 @@ These values represent the probability of reaching the right terminal before the
 The notebook compares prediction performance using RMSE:
 
 $$
-\operatorname{RMSE}
-=
-\sqrt{
-\frac{1}{n}
-\sum_{i=1}^{n}
-(\hat v_i-v_i)^2
-}
+\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}\left(\hat{v}_i-v_i\right)^2}
 $$
 
 The experiments evaluate several constant learning rates.
