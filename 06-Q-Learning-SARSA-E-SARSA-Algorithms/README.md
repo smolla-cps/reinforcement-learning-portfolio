@@ -10,60 +10,19 @@ The notebooks progress from small tabular examples to robot navigation, multi-ag
 
 Q-Learning is an off-policy TD control algorithm:
 
-$$
-Q(S_t,A_t)
-\leftarrow
-Q(S_t,A_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma\max_a Q(S_{t+1},a)
--
-Q(S_t,A_t)
-\right].
-$$
+$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha\left[R_{t+1}+\gamma\max_a Q(S_{t+1},a)-Q(S_t,A_t)\right]$$
 
 ### SARSA
 
 SARSA is an on-policy TD control algorithm:
 
-$$
-Q(S_t,A_t)
-\leftarrow
-Q(S_t,A_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma Q(S_{t+1},A_{t+1})
--
-Q(S_t,A_t)
-\right].
-$$
+$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha\left[R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)\right]$$
 
 ### Expected SARSA
 
 Expected SARSA replaces the single sampled next action with the expected next-state action value:
 
-$$
-Q(S_t,A_t)
-\leftarrow
-Q(S_t,A_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma
-\sum_a
-\pi(a|S_{t+1})Q(S_{t+1},a)
--
-Q(S_t,A_t)
-\right].
-$$
+$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha\left[R_{t+1}+\gamma\sum_{a'}\pi(a'|S_{t+1})Q(S_{t+1},a')-Q(S_t,A_t)\right]$$
 
 ## Notebook Order
 
