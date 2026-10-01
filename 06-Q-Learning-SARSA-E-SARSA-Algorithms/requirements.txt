@@ -1,0 +1,16 @@
+# Core numerical and plotting libraries
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+
+# Reinforcement-learning environments
+gymnasium[toy-text,classic-control,atari]>=1.0
+ale-py>=0.10
+
+# Rendering and notebook display
+imageio>=2.34
+ipython>=8.0
+jupyter>=1.0
+
+# Optional helper for Atari ROM installation on setups that require it
+AutoROM[accept-rom-license]>=0.6
