@@ -114,7 +114,7 @@ Plots are displayed in the notebook; the GIF is generated in the current working
 07-Value-Function-Approximation/
 ├── README.md
 ├── requirements.txt
-└── 07_Value_Function_Approximation.ipynb
+└── 01_Value_Function_Approximation.ipynb
 ```
 
 The generated `mountaincar_vfa.gif` is optional if you want to include an example rollout in the repository.
