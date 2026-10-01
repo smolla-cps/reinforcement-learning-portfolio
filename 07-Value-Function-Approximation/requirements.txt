@@ -1,0 +1,11 @@
+# Python 3.10+
+# Packages imported or used by 07_Value_Function_Approximation.ipynb
+numpy
+pandas
+matplotlib
+gymnasium[classic-control]
+imageio
+ipython
+
+# For running the notebook locally (Google Colab already includes a notebook runtime)
+notebook
