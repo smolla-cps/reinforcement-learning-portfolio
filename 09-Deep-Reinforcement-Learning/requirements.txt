@@ -1,0 +1,11 @@
+# Python >= 3.10; supports local Jupyter execution of the portfolio notebook.
+# On Google Colab, most scientific/PyTorch packages are preinstalled.
+gymnasium[classic-control]>=1.0,<1.4
+torch>=2.2,<3
+numpy>=1.26,<3
+pandas>=2.0
+matplotlib>=3.7
+imageio>=2.31
+imageio-ffmpeg>=0.5
+ipython>=8.0
+jupyterlab>=4.0
