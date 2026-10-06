@@ -230,8 +230,10 @@ so the clipping interval is:
 
 The clipping function is:
 
+The clipping function is:
+
 ```math
-\operatorname{clip}(r_t,0.8,1.2)
+\text{clip}(r_t,0.8,1.2)
 =
 \begin{cases}
 0.8, & r_t < 0.8,\\
@@ -250,9 +252,11 @@ L^{\mathrm{CLIP}}(\theta)
 \min
 \left(
 r_t(\theta)\hat{A}_t,\;
-\operatorname{clip}
+\text{clip}
 \left(
-r_t(\theta),1-\epsilon,1+\epsilon
+r_t(\theta),
+1-\epsilon,
+1+\epsilon
 \right)
 \hat{A}_t
 \right)
