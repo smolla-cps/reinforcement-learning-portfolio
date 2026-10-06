@@ -234,9 +234,9 @@ The clipping function is:
 \operatorname{clip}(r_t,0.8,1.2)
 =
 \begin{cases}
-0.8, & r_t<0.8,\\
-r_t, & 0.8\le r_t\le1.2,\\
-1.2, & r_t>1.2
+0.8, & r_t < 0.8,\\
+r_t, & 0.8 \le r_t \le 1.2,\\
+1.2, & r_t > 1.2
 \end{cases}
 ```
 
@@ -252,13 +252,17 @@ L^{\mathrm{CLIP}}(\theta)
 r_t(\theta)\hat{A}_t,\;
 \operatorname{clip}
 \left(
-r_t(\theta),
-1-\epsilon,
-1+\epsilon
+r_t(\theta),1-\epsilon,1+\epsilon
 \right)
 \hat{A}_t
 \right)
 \right]
+```
+
+The advantage $\hat{A}_t$ indicates whether the sampled action was better or worse than expected.
+
+- $\hat{A}_t > 0$ → encourage the sampled action.
+- $\hat{A}_t < 0$ → discourage the sampled action.
 ```
 
 The advantage $`\hat{A}_t`$ indicates whether the sampled action was better or worse than expected.
@@ -390,6 +394,4 @@ The notebooks can also be opened directly in Google Colab.
 03 → Actor-Critic and PPO
 ```
 
-## Purpose
 
-These notebooks are designed as a reinforcement-learning portfolio and study reference. The focus is on understanding the equations, following the numerical updates step by step, and connecting the mathematics to executable Python code.
