@@ -263,16 +263,17 @@ r_t(\theta),
 \right]
 ```
 
+
+immediately after the first advantage bullet list, even though there was no matching opening code fence before it. You also duplicated the advantage explanation twice.
+
+Use this cleaned version:
+
+````markdown
 The advantage $\hat{A}_t$ indicates whether the sampled action was better or worse than expected.
 
 - $\hat{A}_t > 0$ → encourage the sampled action.
 - $\hat{A}_t < 0$ → discourage the sampled action.
-```
 
-The advantage $`\hat{A}_t`$ indicates whether the sampled action was better or worse than expected.
-
-- $`\hat{A}_t>0`$ → encourage the sampled action.
-- $`\hat{A}_t<0`$ → discourage the sampled action.
 PPO clipping limits the incentive for a single optimization phase to move the policy too far from the rollout policy.
 
 ## Continuous-action policies
@@ -285,9 +286,8 @@ For discrete actions, the notebooks use softmax policies.
 \frac{
 e^{z_a(s)}
 }{
-\sum_{a'}e^{z_{a'}(s)}
+\sum_{a'} e^{z_{a'}(s)}
 }
-```
 
 For continuous actions, the policy can be represented by a probability density.
 
