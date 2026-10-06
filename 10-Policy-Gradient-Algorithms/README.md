@@ -104,36 +104,36 @@ Main topics:
 
 The PPO probability ratio is:
 
-```math
+$$
 r_t(\theta)
 =
 \frac{
-\pi_{\theta}(A_t\mid S_t)
+\pi_{\theta}(A_t \mid S_t)
 }{
-\pi_{\theta_{\mathrm{old}}}(A_t\mid S_t)
+\pi_{\theta_{\mathrm{old}}}(A_t \mid S_t)
 }
-```
+$$
 
 The clipped PPO objective is:
 
-```math
+$$
 L^{\mathrm{CLIP}}(\theta)
 =
 \mathbb{E}
 \left[
 \min
 \left(
-r_t(\theta)\hat A_t,\;
+r_t(\theta)\hat{A}_t,\;
 \operatorname{clip}
 \left(
 r_t(\theta),
 1-\epsilon,
 1+\epsilon
 \right)
-\hat A_t
+\hat{A}_t
 \right)
 \right]
-```
+$$
 
 ## Repository structure
 
