@@ -229,45 +229,29 @@ so the clipping interval is:
 ```
 
 The clipping function is:
+The clipping function is:
 
-```math
-\operatorname{clip}(r_t,0.8,1.2)
-=
+$`\operatorname{clip}(r_t,0.8,1.2)=
 \begin{cases}
 0.8, & r_t<0.8,\\
 r_t, & 0.8\le r_t\le1.2,\\
-1.2, & r_t>1.2.
-\end{cases}
-```
+1.2, & r_t>1.2
+\end{cases}`$
 
 The PPO clipped objective is:
 
-```math
-L^{\mathrm{CLIP}}(\theta)
-=
-\mathbb{E}
-\left[
-\min
-\left(
-r_t(\theta)\hat A_t,\;
-\operatorname{clip}
-\left(
-r_t(\theta),
-1-\epsilon,
-1+\epsilon
+$`L^{\mathrm{CLIP}}(\theta)=
+\mathbb{E}\left[
+\min\left(
+r_t(\theta)\hat{A}_t,\;
+\operatorname{clip}\left(r_t(\theta),1-\epsilon,1+\epsilon\right)\hat{A}_t
 \right)
-\hat A_t
-\right)
-\right]
-```
+\right]`$
 
-The advantage `Â_t` indicates whether the sampled action was better or worse than expected.
+The advantage $`\hat{A}_t`$ indicates whether the sampled action was better or worse than expected.
 
-```text
-Â_t > 0   → encourage the sampled action
-Â_t < 0   → discourage the sampled action
-```
-
+- $`\hat{A}_t>0`$ → encourage the sampled action.
+- $`\hat{A}_t<0`$ → discourage the sampled action.
 PPO clipping limits the incentive for a single optimization phase to move the policy too far from the rollout policy.
 
 ## Continuous-action policies
