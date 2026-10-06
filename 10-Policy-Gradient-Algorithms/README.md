@@ -229,24 +229,18 @@ so the clipping interval is:
 ```
 
 The clipping function is:
+
 The clipping function is:
 
-$`\operatorname{clip}(r_t,0.8,1.2)=
-\begin{cases}
-0.8, & r_t<0.8,\\
-r_t, & 0.8\le r_t\le1.2,\\
-1.2, & r_t>1.2
-\end{cases}`$
+**clip(rₜ, 0.8, 1.2)**
+
+- If rₜ < 0.8 → clip(rₜ) = 0.8
+- If 0.8 ≤ rₜ ≤ 1.2 → clip(rₜ) = rₜ
+- If rₜ > 1.2 → clip(rₜ) = 1.2
 
 The PPO clipped objective is:
 
-$`L^{\mathrm{CLIP}}(\theta)=
-\mathbb{E}\left[
-\min\left(
-r_t(\theta)\hat{A}_t,\;
-\operatorname{clip}\left(r_t(\theta),1-\epsilon,1+\epsilon\right)\hat{A}_t
-\right)
-\right]`$
+**Lᴄʟɪᴘ(θ) = E[min(rₜ(θ) Âₜ, clip(rₜ(θ), 1 − ε, 1 + ε) Âₜ)]**
 
 The advantage $`\hat{A}_t`$ indicates whether the sampled action was better or worse than expected.
 
