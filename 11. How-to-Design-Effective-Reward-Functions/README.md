@@ -130,59 +130,23 @@ $$
 
 TD methods update before the episode is finished by bootstrapping from the next estimate:
 
-$$
-V(S_t)
-\leftarrow
-V(S_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma V(S_{t+1})
--
-V(S_t)
-\right]
-$$
+### Temporal Difference
+
+TD methods update before the episode is finished by bootstrapping from the next estimate:
+
+$$V(S_t) \leftarrow V(S_t) + \alpha \left[R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\right]$$
 
 ### SARSA
 
 SARSA learns from the action actually selected by the current policy:
 
-$$
-Q(S_t,A_t)
-\leftarrow
-Q(S_t,A_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma Q(S_{t+1},A_{t+1})
--
-Q(S_t,A_t)
-\right]
-$$
+$$Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha \left[R_{t+1} + \gamma Q(S_{t+1},A_{t+1}) - Q(S_t,A_t)\right]$$
 
 ### Q-Learning
 
 Q-Learning uses the best estimated next action:
 
-$$
-Q(S_t,A_t)
-\leftarrow
-Q(S_t,A_t)
-+
-\alpha
-\left[
-R_{t+1}
-+
-\gamma\max_a Q(S_{t+1},a)
--
-Q(S_t,A_t)
-\right]
-$$
-
+$$Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha \left[R_{t+1} + \gamma \max_a Q(S_{t+1},a) - Q(S_t,A_t)\right]$$
 These methods differ in how they construct their learning targets, but the reward remains a central part of every update. If the reward signal encourages the wrong behavior, the learning algorithm can correctly optimize the wrong objective.
 
 ---
@@ -431,6 +395,4 @@ Finish with `03_designing_effective_reward_functions.ipynb` to apply those ideas
 
 ---
 
-## Repository Context
 
-This folder is part of a larger reinforcement-learning portfolio covering foundational RL concepts, value-based methods, policy-based methods, deep reinforcement learning, and practical environment design.
