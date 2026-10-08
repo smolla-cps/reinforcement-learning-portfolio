@@ -1,0 +1,23 @@
+# Core reinforcement-learning environments
+gymnasium[classic-control,box2d]
+
+# Deep learning
+tensorflow
+
+# Numerical analysis and data handling
+numpy
+pandas
+
+# Visualization
+matplotlib
+
+# Video generation
+imageio
+imageio-ffmpeg
+
+# Box2D build dependency used by LunarLander
+swig
+
+# Notebook environment
+ipython
+jupyterlab
