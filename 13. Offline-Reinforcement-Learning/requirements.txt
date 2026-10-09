@@ -1,0 +1,23 @@
+# Core numerical and analysis packages
+numpy
+pandas
+matplotlib
+
+# Reinforcement-learning environments and datasets
+gymnasium
+minari
+minigrid
+
+# Offline deep reinforcement learning
+d3rlpy
+
+# Continuous robotics environments
+gymnasium-robotics>=1.2.4
+mujoco
+
+# Manual IQL implementation
+torch
+
+# Notebook environment
+ipython
+jupyterlab
