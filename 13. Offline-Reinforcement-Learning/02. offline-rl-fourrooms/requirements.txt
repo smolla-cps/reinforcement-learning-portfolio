@@ -1,0 +1,15 @@
+# Dataset and environment
+minari==0.5.3
+gymnasium==1.0.0
+minigrid
+
+# Offline deep reinforcement learning
+d3rlpy==2.8.1
+
+# Analysis and visualization
+numpy
+pandas
+matplotlib
+
+# Notebook
+jupyter
