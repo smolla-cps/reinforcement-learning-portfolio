@@ -1,0 +1,19 @@
+# Modern D4RL PointMaze workflow
+minari
+gymnasium
+gymnasium-robotics>=1.2.4
+mujoco
+
+# Manual IQL implementation
+torch
+
+# Offline RL library implementations
+d3rlpy
+
+# Analysis and visualization
+numpy
+pandas
+matplotlib
+
+# Notebook environment
+jupyter
