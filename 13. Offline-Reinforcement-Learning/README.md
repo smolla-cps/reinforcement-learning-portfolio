@@ -1,6 +1,6 @@
 # Offline Reinforcement Learning
 
-A portfolio collection of **offline reinforcement learning** projects that learn policies from fixed datasets rather than collecting new training experience through online environment interaction.
+A collection of **offline reinforcement learning**  that learn policies from fixed datasets rather than collecting new training experience through online environment interaction.
 
 The projects progress from a small tabular problem to discrete offline deep reinforcement learning and then to continuous, goal-conditioned control.
 
@@ -26,13 +26,8 @@ and uses newly collected experience to improve its policy.
 
 In **offline reinforcement learning**, the training data already exists. The learner receives a fixed dataset such as:
 
-$$
-\mathcal D
-=
-\left\{
-(S_t,A_t,R_{t+1},S_{t+1},d_t)
-\right\}
-$$
+```math
+\mathcal{D} = \{(S_t, A_t, R_{t+1}, S_{t+1}, d_t)\}
 
 and must learn without collecting additional training transitions.
 
